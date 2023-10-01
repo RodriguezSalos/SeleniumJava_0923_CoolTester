@@ -7,7 +7,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.safari.SafariDriver;
 import org.testng.annotations.Test;
 
-public class NewTest {
+public class Browser_SeleniumTest {
   @Test
   public void TestChrome() {
 		System.out.println("Test Chrome");
