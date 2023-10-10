@@ -6,6 +6,7 @@ import java.io.InputStream;
 import java.time.Duration;
 import java.util.NoSuchElementException;
 
+import org.apache.commons.codec.binary.Base64;
 import org.json.JSONObject;
 import org.json.JSONTokener;
 import org.openqa.selenium.By;
@@ -17,8 +18,6 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
-
-import io.netty.handler.codec.base64.Base64;
 
 public class Base {
 
@@ -148,8 +147,9 @@ public class Base {
 		}
 	}
 	
-	/*
-	 * public String getEncryptedValue(String encryptedValue) { byte[] decode =
-	 * Base64.decodeBase64(encryptedValue); return new String(decode); }
-	 */
+	
+	  public String getEncryptedValue(String encryptedValue) { 
+		  byte[] decode = Base64.decodeBase64(encryptedValue);
+			  return new String(decode); }
+	 
 }

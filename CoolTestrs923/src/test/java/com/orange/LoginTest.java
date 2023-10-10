@@ -30,7 +30,7 @@ public class LoginTest {
 		// Set values
 		this.username = base.getJSONValue("LoginData", "admin", "username");
 		this.password = base.getJSONValue("LoginData", "admin", "password");
-		loginPage.loginOrange(username, password);
+		loginPage.loginOrange(username, base.getEncryptedValue(password));
 	}
 
 	@Test
