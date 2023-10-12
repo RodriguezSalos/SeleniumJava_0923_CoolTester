@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-10-09T20:54:51Z" name="Default suite" finished-at="2023-10-09T20:55:41Z" duration-ms="50049">
+  <suite started-at="2023-10-12T11:09:48 CDT" name="Default suite" finished-at="2023-10-12T11:10:19 CDT" duration-ms="30845">
     <groups>
     </groups>
-    <test started-at="2023-10-09T20:54:51Z" name="Default test" finished-at="2023-10-09T20:55:41Z" duration-ms="50049">
-      <class name="com.orange.LoginTest">
-        <test-method is-config="true" signature="beforeTest()[pri:0, instance:com.orange.LoginTest@56c4278e]" started-at="2023-10-09T15:54:51Z" name="beforeTest" finished-at="2023-10-09T15:55:04Z" duration-ms="13169" status="PASS">
+    <test started-at="2023-10-12T11:09:48 CDT" name="Default test" finished-at="2023-10-12T11:10:19 CDT" duration-ms="30845">
+      <class name="com.bookflight.BookFlight">
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:com.bookflight.BookFlight@209da20d]" started-at="2023-10-12T11:09:48 CDT" name="beforeTest" finished-at="2023-10-12T11:10:03 CDT" duration-ms="14673" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method signature="TC001()[pri:0, instance:com.orange.LoginTest@56c4278e]" started-at="2023-10-09T15:55:04Z" name="TC001" finished-at="2023-10-09T15:55:41Z" duration-ms="36344" status="PASS">
+        <test-method signature="dd01()[pri:0, instance:com.bookflight.BookFlight@209da20d]" started-at="2023-10-12T11:10:03 CDT" name="dd01" finished-at="2023-10-12T11:10:19 CDT" duration-ms="15786" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC001 -->
-        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.orange.LoginTest@56c4278e]" started-at="2023-10-09T15:55:41Z" name="afterTest" finished-at="2023-10-09T15:55:41Z" duration-ms="490" status="PASS">
+        </test-method> <!-- dd01 -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.bookflight.BookFlight@209da20d]" started-at="2023-10-12T11:10:19 CDT" name="afterTest" finished-at="2023-10-12T11:10:19 CDT" duration-ms="271" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
-      </class> <!-- com.orange.LoginTest -->
+      </class> <!-- com.bookflight.BookFlight -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

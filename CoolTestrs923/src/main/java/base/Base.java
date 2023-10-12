@@ -15,13 +15,14 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.safari.SafariDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 public class Base {
 
-	private WebDriver driver;
+	protected WebDriver driver;
 	/*
 	 * Constructor
 	 */
@@ -43,14 +44,19 @@ public class Base {
 			break;
 		case "Firefox":
 			System.out.println("Test FireFox");
-			//FirefoxDriver driverFF = new FirefoxDriver();
+			// FirefoxDriver driverFF = new FirefoxDriver();
 			driver = new FirefoxDriver();
 			break;
 
 		case "Edge":
 			System.out.println("Test Edge");
-			//EdgeDriver driverE = new EdgeDriver();
+			// EdgeDriver driverE = new EdgeDriver();
 			driver = new EdgeDriver();
+			break;
+		case "Safari":
+			System.out.println("Test Safari");
+			// EdgeDriver driverE = new EdgeDriver();
+			driver = new SafariDriver();
 			break;
 		}
 		return driver;
@@ -130,7 +136,8 @@ public class Base {
 		driver.close();
 		// driver.quit();
 	}
-	public String getJSONValue(String jsonFileObj, String nestedObjKey, String jsonKey){
+
+	public String getJSONValue(String jsonFileObj, String nestedObjKey, String jsonKey) {
 		try {
 
 			// JSON Data
@@ -146,10 +153,10 @@ public class Base {
 			return null;
 		}
 	}
-	
-	
-	  public String getEncryptedValue(String encryptedValue) { 
-		  byte[] decode = Base64.decodeBase64(encryptedValue);
-			  return new String(decode); }
-	 
+
+	public String getEncryptedValue(String encryptedValue) {
+		byte[] decode = Base64.decodeBase64(encryptedValue);
+		return new String(decode);
+	}
+
 }
