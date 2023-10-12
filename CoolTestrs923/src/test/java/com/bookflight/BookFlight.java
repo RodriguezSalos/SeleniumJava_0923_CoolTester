@@ -19,7 +19,6 @@ public class BookFlight {
 		base = new Base(driver);
 		driver = base.driverConnection("Safari");
 		dropdownpractise = new  DropdownsPractise(driver);
-		
 		dropdownpractise.launchPage();
 	}
 
@@ -27,8 +26,7 @@ public class BookFlight {
 	public void dd01() {
 		dropdownpractise.verifyddlCurrency();
 		dropdownpractise.clickDropdownStatic(2);
-		//dropdownpractise.objIsDisplayed(null);
-		
+		dropdownpractise.clickDropdownStatic("USD");		
 	}
 
 	@AfterTest
