@@ -24,9 +24,10 @@ public class BookFlight {
 
 	@Test
 	public void dd01() {
-		dropdownpractise.verifyddlCurrency();
-		dropdownpractise.clickDropdownStatic(2);
-		dropdownpractise.clickDropdownStatic("USD");		
+		//dropdownpractise.verifyddlCurrency();
+		//dropdownpractise.clickDropdownStatic(2);
+		//dropdownpractise.clickDropdownStatic("USD");
+		dropdownpractise.ddlPassengers(2,2,2);
 	}
 
 	@AfterTest

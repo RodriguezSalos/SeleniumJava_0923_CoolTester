@@ -31,6 +31,11 @@ public class DropdownsPractise extends Base {
 	// Objects
 	// Static dropdown
 	By ddlCurrency = By.xpath("//select[contains(@name,'ListCurrency')]");
+	By ddlPassengers = By.xpath("//div[@id='divpaxinfo']");
+	By ddlPsngrsAdltsIncrease = By.xpath("//span[@id='hrefIncAdt']");
+	By ddlPsngrsChildIncrease = By.xpath("//span[@id='hrefIncChd']");
+	By ddlPsngrsInfantIncrease = By.xpath("//span[@id='hrefIncInf']");
+	By ddlDone = By.xpath("//input[@value='Done']");
 
 	// Custom Methods
 	public boolean verifyddlCurrency() {
@@ -78,7 +83,79 @@ public class DropdownsPractise extends Base {
 		System.out.println("End.-clickDropdownStatic");
 	}
 
-
+	public void ddlPassengers(int adults) {
+		/*
+		 * This method is when the dropdown has 'div' tag instance of 'select' tag from the dome.
+		 * 
+		 */
+		
+		System.out.println("Start.-clickDropdown Passengers- DIV tag - adult");
+		driver.findElement(ddlPassengers).click();
+		hardWait(5000);
+		
+		for(int i = adults; i <= adults; ++i) {
+			driver.findElement(ddlPsngrsAdltsIncrease).click();
+		}
+		driver.findElement(ddlDone).click();
+		System.out.println(driver.findElement(ddlPassengers).getText());
+		hardWait(5000);
+		System.out.println("End.-clickDropdown Passengers- DIV tag");
+		hardWait(3000);
+	}
+	
+	public void ddlPassengers(int adults, int child) {
+		/*
+		 * This method is when the dropdown has 'div' tag instance of 'select' tag from the dome.
+		 * 
+		 */
+		
+		System.out.println("Start.-clickDropdown Passengers- DIV tag adult + child");
+		driver.findElement(ddlPassengers).click();
+		hardWait(5000);
+		
+		for(int i = adults; i <= (adults); ++i) {
+			driver.findElement(ddlPsngrsAdltsIncrease).click();
+		}
+		hardWait(5000);
+		for(int i = child; i <= (child+1); ++i) {
+			driver.findElement(ddlPsngrsChildIncrease).click();
+		}
+		hardWait(5000);
+		driver.findElement(ddlDone).click();
+		System.out.println(driver.findElement(ddlPassengers).getText());
+		hardWait(5000);
+		System.out.println("End.-clickDropdown Passengers- DIV tag");
+		hardWait(3000);
+	}
+	
+	public void ddlPassengers(int adults, int child, int infant) {
+		/*
+		 * This method is when the dropdown has 'div' tag instance of 'select' tag from the dome.
+		 * 
+		 */
+		
+		System.out.println("Start.-clickDropdown Passengers- DIV tag adult + child + infant");
+		driver.findElement(ddlPassengers).click();
+		hardWait(5000);
+		
+		for(int i = adults; i <= (adults); ++i) {
+			driver.findElement(ddlPsngrsAdltsIncrease).click();
+		}
+		hardWait(5000);
+		for(int i = child; i <= (child+1); ++i) {
+			driver.findElement(ddlPsngrsChildIncrease).click();
+		}
+		hardWait(5000);
+		for(int i = infant; i <= (infant+1); ++i) {
+			driver.findElement(ddlPsngrsInfantIncrease).click();
+		}
+		hardWait(5000);
+		driver.findElement(ddlDone).click();
+		System.out.println(driver.findElement(ddlPassengers).getText());
+		hardWait(5000);
+		System.out.println("End.-clickDropdown Passengers- DIV tag");
+		hardWait(3000);
+	}
 
 
 
