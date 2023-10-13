@@ -1,11 +1,7 @@
 package poc;
 
-import java.io.PrintStream;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ISelect;
 import org.openqa.selenium.support.ui.Select;
 
 import base.Base;

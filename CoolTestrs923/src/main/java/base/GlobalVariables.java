@@ -4,4 +4,5 @@ public class GlobalVariables {
 	public static final String QA_URL = "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login";
 	public static final String PATH_JSON_DATA = "./src/test/resources/testdata/json/";
 	public static final String PRACTICE_URL = "https://rahulshettyacademy.com/dropdownsPractise/";
+	public static final String SPACEJET = "https://www.spicejet.com/";
 }
