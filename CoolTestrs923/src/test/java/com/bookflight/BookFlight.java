@@ -17,16 +17,26 @@ public class BookFlight {
 	@BeforeTest
 	public void beforeTest() {
 		base = new Base(driver);
-		driver = base.driverConnection("Safari");
+		driver = base.driverConnection("Chrome");
 		dropdownpractise = new  DropdownsPractise(driver);
 		dropdownpractise.launchPage();
 	}
 
 	@Test
 	public void dd01() {
-		//dropdownpractise.verifyddlCurrency();
-		//dropdownpractise.clickDropdownStatic(2);
-		//dropdownpractise.clickDropdownStatic("USD");
+		dropdownpractise.verifyddlCurrency();
+
+	}
+	@Test
+	public void dd02() {
+		dropdownpractise.clickDropdownStatic(2);
+	}
+	@Test
+	public void dd03() {
+		dropdownpractise.clickDropdownStatic("USD");
+	}
+	@Test
+	public void dd04() {
 		dropdownpractise.ddlPassengers(2,2,2);
 	}
 

@@ -14,7 +14,7 @@ public class AdminPage extends Base{
 	
 	//Custom Methods
 	public boolean verifySearchButton(){
-		hardWait(5000);
+		explicitWait(btnSearch,5);
 		return objIsDisplayed(btnSearch);
 	}
 }

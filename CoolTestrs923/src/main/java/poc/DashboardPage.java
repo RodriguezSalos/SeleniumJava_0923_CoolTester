@@ -22,12 +22,12 @@ public class DashboardPage extends Base{
 	}
 	
 	public void clickAdmin() {
-		hardWait(5000);
+		implicitWait(5);
 		click(btnAdmin);
 	}
 	
 	public void clickDashboard() {
-		hardWait(5000);
+		implicitWait(5);
 		click(btnDashboard);
 	}
 }

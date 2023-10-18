@@ -19,14 +19,12 @@ public class LoginPage extends Base {
 	//Custom methods
 	public void loginOrange(String username, String password) {
 		launchBrowser(GlobalVariables.QA_URL);
-		hardWait(5000);
-		//implicitWait(20);
+		//hardWait(5000);
+		explicitWait(btnLogin,3);
 		type(txtUsername, username);
 		type(txtPassword, password);
-		//explicitWait(btnLogin,10);
-		hardWait(5000);
 		click(btnLogin);
-		hardWait(10000);
+		implicitWait(5);
 	}
 
 

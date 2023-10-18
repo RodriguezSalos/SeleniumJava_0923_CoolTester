@@ -14,8 +14,7 @@ public class DropdownsPractise extends Base {
 
 	public void launchPage() {
 		launchBrowser(GlobalVariables.PRACTICE_URL);
-		hardWait(5000);
-		// implicitWait(20);
+		implicitWait(5);
 		/*
 		 * String expectedUrl = "https://rahulshettyacademy.com/dropdownsPractise/";
 		 * String actualUrl = driver.getCurrentUrl(); System.out.println("actualUrl: " +
@@ -35,7 +34,7 @@ public class DropdownsPractise extends Base {
 
 	// Custom Methods
 	public boolean verifyddlCurrency() {
-		hardWait(5000);
+		explicitWait(ddlCurrency,5);
 		System.out.println("verifyddlCurrency end");
 		return objIsDisplayed(ddlCurrency);
 	}
@@ -44,7 +43,7 @@ public class DropdownsPractise extends Base {
 		System.out.println("Start.-clickDropdownStatic - Select by index");
 		Select dd = new Select(driver.findElement(ddlCurrency));
 		int ddSize = dd.getOptions().size();
-		hardWait(5000);
+		explicitWait(ddlCurrency,5);
 		System.out.println("Dropdown values: ");
 		for(int i = 1; i < ddSize; ++i) {
 			dd.selectByIndex(i);
@@ -53,7 +52,7 @@ public class DropdownsPractise extends Base {
 		System.out.println("ddCounter" + (ddSize-1));
 		dd.selectByIndex(index);
 		System.out.println(index + ": " + dd.getFirstSelectedOption().getText());
-		hardWait(5000);
+		implicitWait(5);
 		System.out.println("End.-clickDropdownStatic");
 	}
 	
@@ -66,7 +65,7 @@ public class DropdownsPractise extends Base {
 		System.out.println("Start.-clickDropdownStatic-select by option");
 		Select dd = new Select(driver.findElement(ddlCurrency));
 		int ddSize = dd.getOptions().size();
-		hardWait(5000);
+		implicitWait(5);
 		System.out.println("Dropdown values: ");
 		for(int i = 1; i < ddSize; ++i) {
 			dd.selectByIndex(i);
@@ -75,7 +74,7 @@ public class DropdownsPractise extends Base {
 		System.out.println("ddCounter" + (ddSize-1));
 		dd.selectByVisibleText(option);
 		System.out.println(option + ": " + dd.getFirstSelectedOption().getText());
-		hardWait(5000);
+		implicitWait(5);
 		System.out.println("End.-clickDropdownStatic");
 	}
 
@@ -86,17 +85,19 @@ public class DropdownsPractise extends Base {
 		 */
 		
 		System.out.println("Start.-clickDropdown Passengers- DIV tag - adult");
+		explicitWait(ddlPassengers,5);
 		driver.findElement(ddlPassengers).click();
-		hardWait(5000);
+		
 		
 		for(int i = adults; i <= adults; ++i) {
 			driver.findElement(ddlPsngrsAdltsIncrease).click();
 		}
+		explicitWait(ddlDone,5);
 		driver.findElement(ddlDone).click();
 		System.out.println(driver.findElement(ddlPassengers).getText());
-		hardWait(5000);
+		implicitWait(5);
 		System.out.println("End.-clickDropdown Passengers- DIV tag");
-		hardWait(3000);
+		implicitWait(5);
 	}
 	
 	public void ddlPassengers(int adults, int child) {
@@ -106,22 +107,23 @@ public class DropdownsPractise extends Base {
 		 */
 		
 		System.out.println("Start.-clickDropdown Passengers- DIV tag adult + child");
+		explicitWait(ddlPassengers,5);
 		driver.findElement(ddlPassengers).click();
-		hardWait(5000);
+		implicitWait(5);
 		
 		for(int i = adults; i <= (adults); ++i) {
 			driver.findElement(ddlPsngrsAdltsIncrease).click();
 		}
-		hardWait(5000);
+		explicitWait(ddlPsngrsChildIncrease,5);
 		for(int i = child; i <= (child+1); ++i) {
 			driver.findElement(ddlPsngrsChildIncrease).click();
 		}
-		hardWait(5000);
+		explicitWait(ddlDone,5);
 		driver.findElement(ddlDone).click();
 		System.out.println(driver.findElement(ddlPassengers).getText());
-		hardWait(5000);
+		implicitWait(5);
 		System.out.println("End.-clickDropdown Passengers- DIV tag");
-		hardWait(3000);
+		implicitWait(5);
 	}
 	
 	public void ddlPassengers(int adults, int child, int infant) {
@@ -131,26 +133,27 @@ public class DropdownsPractise extends Base {
 		 */
 		
 		System.out.println("Start.-clickDropdown Passengers- DIV tag adult + child + infant");
+		explicitWait(ddlPassengers,5);
 		driver.findElement(ddlPassengers).click();
-		hardWait(5000);
+		implicitWait(5);
 		
 		for(int i = adults; i <= (adults); ++i) {
 			driver.findElement(ddlPsngrsAdltsIncrease).click();
 		}
-		hardWait(5000);
+		explicitWait(ddlPsngrsChildIncrease,5);
 		for(int i = child; i <= (child+1); ++i) {
 			driver.findElement(ddlPsngrsChildIncrease).click();
 		}
-		hardWait(5000);
+		explicitWait(ddlPsngrsInfantIncrease,5);
 		for(int i = infant; i <= (infant+1); ++i) {
 			driver.findElement(ddlPsngrsInfantIncrease).click();
 		}
-		hardWait(5000);
+		implicitWait(5);
 		driver.findElement(ddlDone).click();
 		System.out.println(driver.findElement(ddlPassengers).getText());
-		hardWait(5000);
+		implicitWait(5);
 		System.out.println("End.-clickDropdown Passengers- DIV tag");
-		hardWait(3000);
+		implicitWait(3);
 	}
 
 

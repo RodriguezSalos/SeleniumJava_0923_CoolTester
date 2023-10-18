@@ -30,16 +30,16 @@ public class HomePage_Spacejet extends Base{
 		
 		
 		System.out.println("Start.-clickDropdownDynamic");
+		explicitWait(ddFrom,5);
 		driver.findElement(ddFrom).click();
-		hardWait(5000);
-		
+		explicitWait(ddFromDstn,5);
 		driver.findElement(ddFromDstn).click();
 		System.out.println("FROM" );
-		hardWait(5000);
+		implicitWait(5);
 		
 		driver.findElement(ddToDstn).click();
 		System.out.println("TO");
-		hardWait(5000);
+		implicitWait(5);
 		
 		System.out.println("End.-clickDropdownDynamic");
 	}

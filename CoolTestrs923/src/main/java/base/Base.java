@@ -97,12 +97,12 @@ public class Base {
 		}
 	}
 
-	public void implicitWait(Duration timeout) {
-		// driver.manage().timeouts().implicitlyWait(timeout, TimeUnit.SECONDS);
+	public void implicitWait(int i) {
+		 driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(i) );
 	}
 
-	public void explicitWait(By obj, Duration i) {
-		WebDriverWait wait = new WebDriverWait(driver, i);
+	public void explicitWait(By obj, int i) {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(i));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(obj));
 	}
 
